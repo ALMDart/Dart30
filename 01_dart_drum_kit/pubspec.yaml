@@ -1,7 +1,7 @@
 name: drum_kit
 description: An html drum machine.
 version: 0.1.0
-#homepage: https://www.example.com
+homepage: https://javascript30.com/
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
