@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:html';
+import 'dart:js';
 
 class Dog {
   final String name;
@@ -10,16 +11,21 @@ class Dog {
 
 final List<Dog> dogs = [Dog('Snickers', 2), Dog('hugo', 8)];
 
+
 void makeGreen() {
   final p = querySelector('p');
   p.style.color = '#BADA55';
   p.style.fontSize = '50px';
+  print('yo');
 }
 
 void main() {
   // Regular
   //  print
   print('hello');
+
+  context['makeGreen'] = makeGreen;
+
 
   // Interpolated (Doesn't work)
   //  print('Hello I am a %s string!', '💩');
