@@ -14,7 +14,7 @@ void handleKeyup(Event e) {
   }
   if (pressed.join('').contains(secretCode)) {
     print('DING DING!');
-    context['cornify_add']();
+    context.callMethod('cornify_add');
   }
   print(pressed);
 }
