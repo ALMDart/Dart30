@@ -1,5 +1,5 @@
 name: hold_shift_check_checkboxes
-description: An absolute bare-bones web app.
+description: Shift click to multi select checkboxes.
 version: 0.1.0
 homepage: https://javascript30.com/
 

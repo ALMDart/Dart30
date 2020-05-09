@@ -1,5 +1,5 @@
 name: key_sequence_detection
-description: An absolute bare-bones web app.
+description: Detect a squence of key presses.
 version: 0.1.0
 homepage: https://javascript30.com/
 
