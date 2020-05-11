@@ -17,7 +17,6 @@ void highlightLink(Event e) {
   highlight.style.width = '${coords['width']}px';
   highlight.style.height = '${coords['height']}px';
   highlight.style.transform = 'translate(${coords['left']}px, ${coords['top']}px)';
-
 }
 
 void main() {
