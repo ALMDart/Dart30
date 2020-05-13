@@ -1,8 +1,14 @@
+@JS()
+library key_sequence_detection;
+
 import 'dart:html';
-import 'dart:js';
+import 'package:js/js.dart';
 
 var pressed = <String>[];
 const secretCode = 'wesbos';
+
+@JS('cornify_add')
+external void cornify();
 
 void handleKeyup(Event e) {
   final target = e as KeyboardEvent;
@@ -14,7 +20,7 @@ void handleKeyup(Event e) {
   }
   if (pressed.join('').contains(secretCode)) {
     print('DING DING!');
-    context.callMethod('cornify_add');
+    cornify();
   }
   print(pressed);
 }
