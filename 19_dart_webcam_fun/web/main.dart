@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:html';
-
-import 'dart:js';
+import 'package:js/js.dart';
+import 'package:js/js_util.dart';
 
 final video = document.querySelector('.player') as VideoElement;
 final canvas = document.querySelector('.photo') as CanvasElement;
@@ -119,5 +119,5 @@ ImageData greenScreen(ImageData pixels) {
 void main() {
   getVideo();
   video.addEventListener('canplay', paintToCanvas);
-  context['takePhoto'] = takePhoto;
+  setProperty(window, 'takePhoto', allowInterop(takePhoto));
 }
