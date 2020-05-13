@@ -1,7 +1,5 @@
 import 'dart:html';
 
-import 'dart:js';
-
 void removeTransition(Event e) {
   if((e as TransitionEvent).propertyName != 'transform') return;
   e.target as HtmlElement ..classes.remove('playing');
@@ -19,5 +17,5 @@ void playSound(Event e) {
 
 void main() {
   querySelectorAll('.key').forEach((e) => e.addEventListener('transitionend', removeTransition));
-  context['window'] as Window ..addEventListener('keydown', playSound);
+  window.addEventListener('keydown', playSound);
 }
