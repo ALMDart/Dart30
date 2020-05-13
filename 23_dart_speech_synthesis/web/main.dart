@@ -51,7 +51,7 @@ void setOption(Event e) {
 }
 
 void main() {
-  msg.text = (document.querySelector('[name="text"]') as TextAreaElement).value;
+  msg.text = (querySelector('[name="text"]') as TextAreaElement).value;
   window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
   options.forEach((option) => option.addEventListener('change', setOption));
