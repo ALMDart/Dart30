@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:html';
-import 'dart:js';
+import 'package:js/js.dart';
+import 'package:js/js_util.dart';
 
 class Dog {
   final String name;
@@ -24,11 +25,10 @@ void main() {
   //  print
   print('hello');
 
-  context['makeGreen'] = makeGreen;
-
+  setProperty(window, 'makeGreen', allowInterop(makeGreen));
 
   // Interpolated (Doesn't work)
-  //  print('Hello I am a %s string!', '💩');
+//    print('Hello I am a %s string!', '💩');
 
   // Styled
   // print('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
