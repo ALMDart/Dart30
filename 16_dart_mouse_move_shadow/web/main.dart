@@ -5,6 +5,7 @@ final text = hero.querySelector('h1');
 const walk = 500; // 500px
 
 void shadow(Event e) {
+  if(e is! MouseEvent) return;
   final target = e as MouseEvent;
   final width = hero.offsetWidth;
   final height = hero.offsetHeight;

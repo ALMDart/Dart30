@@ -4,7 +4,7 @@ import 'dart:js';
 
 import 'dart:math';
 
-final holes = querySelectorAll('.hole') as List<Element>;
+final holes = querySelectorAll('.hole');
 final scoreBoard = querySelector('.score') as HtmlElement;
 final moles = querySelectorAll('.mole');
 var lastHole;

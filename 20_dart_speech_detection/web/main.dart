@@ -11,6 +11,7 @@ void main() {
   words.append(p);
 
   recognition.addEventListener('result', (Event e) {
+    if(e is! SpeechRecognitionEvent) return;
     final target = e as SpeechRecognitionEvent;
     final results = List.from(target.results);
     final transcript = results

@@ -5,6 +5,7 @@ final bar = speed.querySelector('.speed-bar');
 final video = document.querySelector('.flex') as VideoElement;
 
 void handleMove(Event e) {
+  if(e is! MouseEvent) return;
   final mouseEvent = e as MouseEvent;
   final target = e.currentTarget as HtmlElement;
   final y = mouseEvent.page.y - target.offsetTop;
@@ -17,8 +18,6 @@ void handleMove(Event e) {
   bar.text = playbackRate.toStringAsFixed(2) + '×';
   video.playbackRate = playbackRate;
 }
-
-
 
 void main() {
   speed.addEventListener('mousemove', handleMove);

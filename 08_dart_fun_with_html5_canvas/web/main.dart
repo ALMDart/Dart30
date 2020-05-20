@@ -19,6 +19,7 @@ void main() {
   var direction = true;
 
   void draw(Event e) {
+    if(e is! MouseEvent) return;
     if (!isDrawing) return; // stop the fn from running when they are not moused down
     final target = e as MouseEvent;
     print(e);
@@ -48,6 +49,7 @@ void main() {
   }
 
   canvas.addEventListener('mousedown', (Event e) {
+    if(e is! MouseEvent) return;
     final target = e as MouseEvent;
     isDrawing = true;
     lastX = target.offset.x;

@@ -7,6 +7,7 @@ void toggleOpen(Event e) {
 }
 
 void toggleActive(Event e) {
+  if(e is! TransitionEvent) return;
   final tEvent = e as TransitionEvent;
   print(tEvent.propertyName);
   if (tEvent.propertyName.contains('flex')) {

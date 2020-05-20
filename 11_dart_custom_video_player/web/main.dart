@@ -41,6 +41,7 @@ void handleProgress(Event e) {
 }
 
 void scrub(Event e) {
+  if(e is! MouseEvent) return;
   print((e as MouseEvent).offset);
   final scrubTime = ((e as MouseEvent).offset.x / progress.offsetWidth) * video.duration;
   video.currentTime = scrubTime;

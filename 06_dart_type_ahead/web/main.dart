@@ -45,7 +45,7 @@ void displayMatches(Event e) {
     return '''
   <li>
   <span class="name">${cityName}, ${stateName}</span>
-//  <span class="population">${numberWithCommas(place.population)}</span>
+    <span class="population">${numberWithCommas(place.population)}</span>
   </li>
   ''';
   }).join('');

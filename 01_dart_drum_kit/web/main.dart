@@ -6,6 +6,7 @@ void removeTransition(Event e) {
 }
 
 void playSound(Event e) {
+  if(e is! KeyboardEvent) return;
   final key = e as KeyboardEvent;
   final audio = querySelector('audio[data-key="${key.keyCode}"]') as AudioElement;
   final keyE = querySelector('div[data-key="${key.keyCode}"]') as HtmlElement;

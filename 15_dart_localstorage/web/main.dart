@@ -30,7 +30,7 @@ void addItem(Event e) {
 }
 
 void toggleDone(Event e) {
-  if(!(e is InputElement)) return;
+  if(e.target is! InputElement) return;
   final el = e.target as InputElement;
   final index = el.dataset['index'];
   items[index]['done'] = !items[index]['done'];

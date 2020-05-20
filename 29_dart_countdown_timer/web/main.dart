@@ -39,7 +39,7 @@ void displayTimeLeft(seconds) {
 }
 
 void displayEndTime(timestamp) {
-  final end = new DateTime.fromMicrosecondsSinceEpoch(timestamp);
+  final end = DateTime.fromMicrosecondsSinceEpoch(timestamp);
   final hour = end.hour;
   final adjustedHour = hour > 12 ? hour - 12 : hour;
   final minutes = end.minute;

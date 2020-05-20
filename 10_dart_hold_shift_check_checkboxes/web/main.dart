@@ -6,6 +6,7 @@ void main() {
   var lastChecked;
 
   void handleCheck(Event e) {
+    if(e is! MouseEvent) return;
     final click = e as MouseEvent;
     final box = e.target as CheckboxInputElement;
     // Check if they had the shift key down

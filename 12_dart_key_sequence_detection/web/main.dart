@@ -11,6 +11,7 @@ const secretCode = 'wesbos';
 external void cornify();
 
 void handleKeyup(Event e) {
+  if(e is! KeyboardEvent) return;
   final target = e as KeyboardEvent;
   print(target.key);
   pressed.add(target.key);

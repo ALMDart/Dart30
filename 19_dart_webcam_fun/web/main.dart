@@ -92,6 +92,7 @@ ImageData greenScreen(ImageData pixels) {
   final levels = {};
 
   querySelectorAll('.rgb input').forEach((input) {
+    if(input is! InputElement) return;
     final target = input as InputElement;
     levels[target.name] = target.value;
   });
@@ -100,7 +101,6 @@ ImageData greenScreen(ImageData pixels) {
     var red = pixels.data[i + 0];
     var green = pixels.data[i + 1];
     var blue = pixels.data[i + 2];
-    var alpha = pixels.data[i + 3];
 
     if (red >= levels['rmin'] &&
         green >= levels['gmin'] &&
