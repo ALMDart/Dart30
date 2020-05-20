@@ -8,7 +8,9 @@ final buttons = querySelectorAll('[data-time]');
 
 void timer(seconds) {
   // clear any existing timers
-  countdown.cancel();
+  if(countdown != null) {
+    countdown.cancel();
+  }
 
   final now = DateTime.now().millisecondsSinceEpoch;
   final then = now + seconds * 1000;
@@ -54,7 +56,7 @@ void startTimer(Event e) {
 void main() {
   buttons.forEach((button) => button.addEventListener('click', startTimer));
 
-  final form = document.getElementsByName('customForm') as FormElement;
+  final form = document.getElementsByName('customForm').first as FormElement;
 
   form.addEventListener('submit', (Event e) {
     e.preventDefault();
